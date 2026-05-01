@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>潜在意識１秒書き換え - 登録ページ</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #fff; color: #333; }
+  
+  /* セクション共通 */
+  .section { width: 100%; }
+  
+  /* ヘッダーセクション */
+  .section-header { background: #0000ff; padding: 25px 20px; text-align: center; }
+  .section-header p { color: #fff; }
+  .subhead-main { font-size: clamp(16px, 4.5vw, 23px); font-weight: bold; }
+  .subhead-sub { font-size: clamp(13px, 3vw, 16px); margin-top: 6px; }
+
+  /* メインコンテンツ */
+  .section-main { background: #ffffff; padding: 32px 28px 0; }
+  .row-inner { max-width: 900px; margin: 0 auto; }
+
+  /* 見出し */
+  .headline { font-size: clamp(19px, 5.2vw, 32px); color: #000080; text-align: center; line-height: 1.7; padding: 10px 0; }
+  
+  /* ボタン */
+  .btn-wrap { text-align: center; padding: 18px 40px 0; }
+  .btn-green {
+    display: inline-block;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: #fff;
+    font-size: clamp(18px, 5vw, 28px);
+    font-weight: bold;
+    padding: 20px 36px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 6px 0 #1a8a45;
+    animation: scale-pulse 1.5s infinite;
+    text-decoration: none;
+  }
+  .btn-green .sub { font-size: clamp(14px, 3.5vw, 17px); display: block; opacity: 0.9; margin-top: 4px; }
+  @keyframes scale-pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.03)} }
+
+  /* 本文テキスト */
+  .body-text { font-size: clamp(16px, 4.5vw, 18px); color: #333; text-align: center; line-height: 1.9; padding: 10px 50px 0; }
+  @media(max-width:600px){ .body-text { padding: 10px 12px 0; } }
+
+  /* プロフィール */
+  .section-profile { background: #fff; padding: 20px 28px; max-width: 900px; margin: 0 auto; display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
+  .profile-img { width: 45%; max-width: 200px; border-radius: 50%; flex-shrink: 0; }
+  @media(max-width:600px){ .profile-img { width: 120px; } .section-profile { flex-direction: column; align-items: center; } }
+  .profile-name { text-align: center; font-size: 20px; font-weight: bold; color: #1b1464; margin-bottom: 8px; }
+  .profile-bio { font-size: clamp(14px, 3.8vw, 16px); line-height: 1.8; text-align: center; color: #444; }
+
+  /* フッター */
+  .section-footer { background: #0000ff; padding: 20px; text-align: center; color: #fff; font-size: 13px; }
+  .section-footer a { color: #fff; margin: 0 10px; }
+
+  /* ポップアップ */
+  .popup-overlay { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; }
+  .popup-overlay.active { display: flex; }
+  .popup-box { background: #fff; border-radius: 12px; padding: 30px 24px; width: 90%; max-width: 480px; position: relative; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+  .popup-close { position: absolute; top: 12px; right: 16px; font-size: 24px; cursor: pointer; color: #999; }
+  .popup-title { font-size: clamp(20px, 6vw, 28px); font-weight: bold; color: #0000cd; text-align: center; margin-bottom: 10px; }
+  .popup-sub { text-align: center; font-size: 15px; color: #333; margin-bottom: 16px; line-height: 1.6; }
+  .popup-sub strong { color: #0000cd; }
+  .popup-input { width: 100%; padding: 14px 16px; font-size: 16px; border: 2px solid #02234f; border-radius: 6px; margin-bottom: 14px; font-weight: bold; color: #02234f; }
+  .popup-btn { width: 100%; background: linear-gradient(135deg, #2ecc71, #27ae60); color: #fff; font-size: clamp(18px, 5vw, 22px); font-weight: bold; padding: 18px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 5px 0 #1a8a45; }
+  .popup-btn .sub { font-size: 14px; display: block; opacity: 0.9; }
+  .popup-note { font-size: 10px; color: #888; margin-top: 12px; line-height: 1.5; }
+
+  /* ハイライト */
+  mark { background: #ccffff; }
+  .pink-mark { background: #fff0f5; }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<div class="section section-header">
+  <p class="subhead-main">これは実話です...</p>
+  <p class="subhead-sub">潜在意識×量子力学×脳科学</p>
+</div>
+
+<!-- メインコンテンツ -->
+<div class="section section-main">
+  <div class="row-inner">
+
+    <div class="headline">
+      ポジティブになっても<br>ジャーナリングをやっても<br>ブロック解除を繰り返しても<br><br>
+      現実が大きく変わらなかった方へ<br><br>
+      それはあなたの努力不足では<br>ありません<br><br>
+      誰でも、24時間後から<br>エネルギーを自在に扱って<br><br>
+      たった1秒で無意識を<br>書き換えて<br><br>
+      心も経済も豊かな本来の自分で<br>生きていく<br><br>
+      94%の実践者が<br>変化を実感した 新次元のメソッドが<br>初解禁<br><br>
+      <strong>567名</strong>が登録した このメソッド<br>あなたも体験しませんか？
+    </div>
+
+    <div class="btn-wrap">
+      <button class="btn-green" onclick="openPopup()">
+        １秒で潜在意識を書き換える
+        <span class="sub">登録無料</span>
+      </button>
+    </div>
+
+    <div class="body-text">
+      <p>なぜ、<strong style="color:#ff0000;font-size:1.1em">18年間</strong>「<strong style="color:#000080;font-size:1.1em">身体の専門家</strong>」として<br>
+      <span style="color:#ff0000;font-size:1.1em"><strong>1万人</strong></span><strong style="color:#000080">以上を施術してきた私が<br>
+      「身体だけでは人生は変わらない」と気づき<br>
+      量子物理学と潜在意識を統合したメソッドで<br>
+      クライアントの人生を次々と</strong><span style="color:#ff0000;font-size:1.1em"><strong>激変</strong></span><strong style="color:#000080">させているのか！</strong></p>
+
+      <br>
+      <p><span style="color:#0000ff;font-size:1.1em"><strong><mark>「1秒で潜在意識を書き換える」</mark><br><mark>エネルギーマスターメソッドの全貌</mark></strong></span></p>
+      <br>
+      <p><strong style="color:#000080">なぜ今の人生に大きな不満はないのに<br>「このままでいいのか？」<br>というモヤモヤが消えないのか...❓</strong></p>
+      <br>
+
+      <p>❎自己啓発もスピリチュアルも学んだが<br>「本来の自分」にはまだ辿り着けていない<br><br>
+      ❎トラウマ解除、ブロック解除<br>エネルギーヒーリング<br>いろいろ受けたけど変わらなかった<br><br>
+      ❎「やるべきこと」はやってきたが<br>「本気でやりたいこと」ではない気がする<br><br>
+      ❎目標を達成しても達成感に違和感が残る<br><br>
+      ❎「これをやるために生まれてきた!」という実感がない<br><br>
+      ❎今のままじゃない思いながらも<br>次のステージに進めずにいる</p>
+      <br>
+
+      <p><span style="color:#0000ff;font-size:1.1em"><strong><mark>私自身も累計750万円以上を自己投資をしました</mark></strong></span></p>
+      <br>
+      <p>サロン経営は安定、クライアントからの評価も高い、収入も増えた。</p>
+      <br>
+      <p><strong style="color:#000080">でも「これが限界じゃないはず…」という想いが消えませんでした。</strong></p>
+      <br>
+      <p>トラウマ・カルマ解除、ブロック解除<br>潜在意識書き換え講座、霊視鑑定<br>チャネリングセッション、アカシックリーディング、引き寄せ講座、魂の使命講座、覚醒リトリート、次元上昇ワーク、周波数調整機械...</p>
+      <br>
+      <p>これらを行い<br>結果は…<strong style="color:#000080">「なんとなく良い感じ」</strong>止まり<br>決定的なブレイクスルーは起きませんでした。</p>
+      <br>
+      <p>そんな時、量子物理学の研究者との出会いがすべてを変えました。</p>
+      <br>
+      <p><strong style="color:#000080">「一般的な方法は、<span style="color:#ff0000">潜在</span>意識に<span style="color:#ff0000">顕在</span>意識でアプローチしているに過ぎない。<span style="color:#ff0000">無意識</span>そのものが変わらなければ次元の違うステージには行けない」</strong></p>
+      <br>
+      <p>なぜ、従来の方法では限界突破できないのか?</p>
+      <br>
+      <p><strong style="color:#000080">これまでの経験の積み重ねが「潜在意識の枠」を作り、</strong><strong style="color:#ff0000">「無意識」</strong><strong style="color:#000080">が今のレベルで固定されてしまうからです。</strong></p>
+      <br>
+
+      <p><strong style="color:#000080">目標設定・行動計画</strong> → 現在の顕在意識の枠内での努力では器は広がらない<br><br>
+      <strong style="color:#000080">アファメーション</strong> → 潜在意識(97%)の「制限」はそのまま<br><br>
+      <strong style="color:#000080">コーチング・コンサル</strong> → 顕在意識が納得し「ブロックが外れた気になる」</p>
+      <br>
+      <p>さらに致命的な欠点が…<br><strong style="color:#ff0000"><span class="pink-mark">時間がかかりすぎる</span></strong></p>
+      <br>
+      <p>忙しく成果を出し続けているあなたには、飛躍したいけれど<br><strong style="color:#ff0000"><span class="pink-mark">時間はかけたくない</span></strong>はずです。</p>
+      <br>
+      <p>最短で次のステージに行くには...</p>
+      <br>
+      <p><strong style="color:#000080">量子レベルで「<span style="color:#ff0000">無意識</span>領域」を変容させる必要がある</strong></p>
+      <br>
+      <p>それが</p>
+      <br>
+      <p><span style="color:#0000ff;font-size:1.1em"><strong><mark>「1秒で潜在意識を書き換える」<br>エネルギーマスターメソッド</mark></strong></span></p>
+      <br>
+
+      <p><strong style="color:#0000cd">💎 3つのアプローチ 💎</strong></p>
+      <br>
+      <p><strong style="color:#000080">① あなた自身が</strong><strong style="color:#ff0000">エネルギーマスター</strong><strong style="color:#000080">になる</strong><br><br>
+      24時間後から自分でコードを書き換えられるようになる<br>誰かに依存するのではなく<br><strong style="color:#000080">自分で無意識領域を調整できる</strong>ようになり<br>スピリチュアルジプシーから卒業。</p>
+      <br>
+      <p>② <strong style="color:#000080">独自の<br><span style="color:#ff0000">「自動個別最適化機能」</span></strong><br>あなたの波動レベル、現在の状況、魂の成長段階に合わせて、書き換えを行うので<br><strong style="color:#ff0000">自分</strong><strong style="color:#000080">には合わないということが起きない</strong><br><br>周りの人には効果があったのにということが起きない。</p>
+      <br>
+      <p><strong style="color:#000080">③ 魂レベルでの永続的な変容</strong><br><br>表層ではなく、魂レベル・ハイアーセルフレベルでの変容が起きるため<strong style="color:#ff0000">元に戻る</strong><strong style="color:#000080">ことがありません</strong>。</p>
+      <br>
+      <p>本当の自分が目覚め、覚醒が起こる<br>魂の使命が自然に顕在化<br>ただ在るだけで周囲を幸せにする存在になる</p>
+      <br>
+      <p>このメソッドの特徴</p>
+      <br>
+      <p>✅ ノウハウではなく<strong style="color:#ff0000">無意識</strong><strong style="color:#000080">そのものを変える</strong><br><br>
+      ✅ <strong style="color:#ff0000">量子レベル</strong><strong style="color:#000080">での変容</strong>（努力ではなく、周波数が変わる）<br><br>
+      ✅ <strong style="color:#ff0000">エネルギー</strong><strong style="color:#000080">を扱う側になる</strong>（セッション依存から卒業）<br><br>
+      ✅ <strong style="color:#ff0000">自動個別最適化機能</strong>であなたに最適な波動が降りてくる<br><br>
+      ✅ 実践者の<strong style="color:#ff0000">94%</strong><strong style="color:#000080">が変化を報告</strong><br><br>
+      ✅ <strong style="color:#000080">個別にこれらを追いかける必要はありません</strong></p>
+      <br>
+      <p><span style="color:#0000cd;font-size:1.1em"><strong><mark>１秒書き換えは<br>そのすべての"根本原因"に触れる技術だからです。</mark></strong></span></p>
+      <br>
+
+      <p><strong>🌈 私自身に起きたブレイクスルー</strong></p>
+      <br>
+      <p><strong style="color:#000080">ビジネス</strong>: サロン月商４.3倍（労働時間は減少）<br>オンライン講座がキャンセル待ち状態</p>
+      <br>
+      <p><strong style="color:#000080">経済</strong>: 資産運用で8桁の利益、新しい収入源が3つ生まれた</p>
+      <br>
+      <p><strong style="color:#000080">影響力</strong>: 業界トップレベルの人物とコラボ実現<br>著名ヒーラーから「なぜか」<strong>100万円相当のエネルギー伝授</strong>を受けることに</p>
+      <br>
+      <p><strong style="color:#000080">内面:</strong> 使命への確信が生まれ、直感の精度が上がり判断を間違えなくなった<br><strong>自分を信頼できるように</strong></p>
+      <br>
+      <p><strong style="color:#000080">人間関係</strong>: 自己受容が深まるにつれ人間関係が自然と豊かになる</p>
+      <br>
+
+      <p>⭐️ 実際の喜びの声 ⭐️</p>
+      <br>
+      <p><strong>Cさん（会社経営者・40代）</strong></p>
+      <p>「最初は半信半疑でしたが、こんなに簡単に自分でエネルギーを扱えるようになるとは思っていませんでした。特別な才能も、長い練習も必要なかった。実践してすぐに2,000万、500万、3,000万の案件が決まり、6ヶ月で5億6千万、その翌年には5億の受注が決定。今年に入りまだ4週間ですが、4件の案件で29億も決まりそうです。数字の変化だけでなく、社内の空気が明るくなり、人間関係もまるで別世界のように良くなりました。毎日が本当に充実しています。人生の満足度が、以前とはまったく違います。」</p>
+      <br>
+      <p><strong>Mさん（会社員・部長職・40代）</strong></p>
+      <p>「ずっと『このままでいいのか』と悩んでいました。いろんな方法を試してきたけれど、エネルギーを自分で使いこなせるようになるとは思っていなかった。でも頑張らなくていい、時間をかけなくていい――それが本当でした。本当にやりたいことが見えてきて、新たな学びを始め会社を辞める準備をしています。とはいえ日々の仕事も充実しており、年末に1億円、年始に1億円の案件を受注して会社に貢献することができました。」</p>
+      <br>
+      <p><strong>Kさん（サロン経営・30代）</strong></p>
+      <p>「これまでいろんな講座やセッションを受けてきましたが、エネルギーを扱うのは特別な人だけができることだと思っていました。練習も準備も必要なく、24時間後には自分でエネルギーを使えている――そんなことが本当に起きるとは思っていなかったです。頑張らなくていい、時間もかけなくていい。受講してから1ヶ月余りで、主人の仕事にも変化が。これまでの最高受注だった150万が、300万・350万と2件連続で入ってきました。自分のサロンだけでなく、家庭全体が動き始めた感覚があります。」</p>
+      <br>
+      <p><strong>Tさん（家業を夫婦で経営・40代）</strong></p>
+      <p>「スピリチュアルは学んできたけれど、自分がエネルギーを使う側になれるとは思っていませんでした。それがこんなに自然にできるようになるとは。受講開始からわずか3週間で、長年悩んでいた義姉との関係がかなり軽減されていることに気づきました。お金や仕事の変化より先に、こんなに身近なところが変わるとは思っていなかったです。」</p>
+      <br>
+      <p><strong>Nさん（サロン経営・40代）</strong></p>
+      <p>「何年もかけて学んできたのに変われなかった私が、努力も練習もなく変われるのかと最初は疑っていました。でも母との長年の確執が、気づいたら消えていました。何十年も抱えていたものが、こんなにすっと手放せるとは。パートナーとの関係も自然と深まり、人間関係が変わると仕事への意欲まで変わることを実感しています。これを機にサロンをさらに拡大していこうと、今、本当に前向きな気持ちでいます。」</p>
+      <br>
+      <p><em>（個人の感想であり効果を保証するものではありません）</em></p>
+      <br>
+
+      <p><span style="color:#0000cd;font-size:1.1em"><strong><mark>さらなるブレイクスルーを<br>目指すあなたへ</mark></strong></span></p>
+      <br>
+      <p>【まずは無料ウェビナーで全貌を公開】</p>
+      <br>
+      <p>💎 <strong style="color:#000080">1秒で潜在意識を書き換える</strong> 💎</p>
+      <br>
+      <p>舞台裏をすべて公開した特別ウェビナーを無料でご用意しています。</p>
+      <br>
+      <p>このウェビナーで、あなたは...</p>
+      <br>
+      <p><strong style="color:#0000cd">▶︎なぜ今まで変われなかったのか<br>▶︎どうすれば1秒で変われるのか<br>▶︎実践者がどう人生を変えたのか</strong></p>
+      <br>
+      <p><strong>すべてを知ることができます</strong></p>
+      <br>
+      <p>今まで様々、学んできたあなたには<br>もう知識は十分にあります。<br>足りなかったのはコードだけでした。</p>
+      <br>
+      <p><span style="color:#ff0000;font-size:1.1em"><strong><span class="pink-mark">🎁 個別相談セッションに無料でご案内</span></strong></span></p>
+      <br>
+      <p>✅ あなたが「なぜ今まで変われなかったのか」を一緒に紐解きます<br><br>
+      ✅ あなたの現在の無意識パターンをリオンが直接診断します<br><br>
+      ✅ このメソッドがあなたの人生にどう機能するかをお伝えします</p>
+      <br>
+      <p><strong style="color:#0000cd">※ 枠数限定のため、お早めに</strong></p>
+      <br>
+      <p>⚠️ この無料動画は期間限定公開です</p>
+      <br>
+      <p>※ このメソッドは期間限定公開です<br>※ 予告なく終了する場合があります<br>※エネルギーの特性上、お受けできる人数に限りがあります。</p>
+      <br>
+      <p>現在の条件でのご案内は<br><strong style="color:#0000cd">残りわずかとなっています。</strong></p>
+    </div>
+
+    <div class="btn-wrap" style="padding-bottom: 40px; padding-top: 20px;">
+      <button class="btn-green" onclick="openPopup()">
+        １秒で潜在意識を書き換える
+        <span class="sub">登録無料</span>
+      </button>
+    </div>
+
+  </div><!-- /row-inner -->
+</div><!-- /section-main -->
+
+<!-- プロフィール -->
+<div style="background:#fff; padding: 20px 28px;">
+  <div class="section-profile">
+    <img class="profile-img" src="https://utagesystem.s3.ap-northeast-1.amazonaws.com/EL73uqmuPECh/9JUfiXR34QSs/qA5XmcQraCg9rLcwZHSNxZCdIbw2HqTVNkLy7A9B.jpg" alt="リオン">
+    <div>
+      <p class="profile-name">リオン<br><span style="font-size:14px; font-weight:normal; color:#555;">潜在意識と身体の専門家</span></p>
+      <p class="profile-bio">「こころとカラダはひとつ」意識と肉体のつながりを、量子物理・波動・潜在意識の視点から探究し、１秒で潜在意識を変容させるエネルギーの使い方を伝える、潜在意識書き換えと身体の専門家。1８年以上にわたり、整体、ピラティスを中心としたボディメソッドを探求、これまでにのべ1万人以上の身体を調整。サロン運営を通じて「好きを仕事に」しながら「潜在意識１秒書き換え講座 潜在意識×量子力学×脳科学」を主宰。</p>
+    </div>
+  </div>
+</div>
+
+<!-- フッター -->
+<div class="section-footer">
+  <a href="https://utage-system.com/p/Sc2xXWvCMV5J" target="_blank">プライバシーポリシー</a>
+  <a href="https://utage-system.com/p/YB7sbL4Xzs7H" target="_blank">特商法</a>
+  <p style="margin-top:10px; font-size:12px;">© Natural Beauty Salon Rion</p>
+</div>
+
+<!-- ポップアップ -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-box">
+    <span class="popup-close" onclick="closePopup()">✕</span>
+    <p class="popup-title">潜在意識を1秒で書き換える</p>
+    <p class="popup-sub">特別講義はメルマガ登録後に参加できる<br>"<strong>公式LINE</strong>"限定で配信しています</p>
+    <input type="email" class="popup-input" placeholder="メールアドレスを入力">
+    <button class="popup-btn">
+      本気で人生を変えたい！
+      <span class="sub">登録無料</span>
+    </button>
+    <p class="popup-note">※当社プライバシーポリシーおよび個人情報保護法で定められた基準に従い厳重に管理し、第三者への提供や迷惑メールなどは一切行われないことをお約束します。</p>
+  </div>
+</div>
+
+<script>
+  function openPopup(){ document.getElementById('popupOverlay').classList.add('active'); }
+  function closePopup(){ document.getElementById('popupOverlay').classList.remove('active'); }
+  document.getElementById('popupOverlay').addEventListener('click', function(e){ if(e.target===this) closePopup(); });
+</script>
+</body>
+</html>
